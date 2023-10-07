@@ -1,3 +1,3 @@
-export * from "./models/registration";
+export * from "./models/registrationForm";
 export * from "./models/webSettings";
 export * from "./models/user";
