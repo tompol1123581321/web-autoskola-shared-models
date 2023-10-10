@@ -1,1 +1,3 @@
-export type StudiumPageData = {}
+export type StudiumPageData = {
+  headerText: string;
+};
