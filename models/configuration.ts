@@ -1,4 +1,4 @@
-import { RegistrationFormSettings } from "./registrationForm";
+import { RegistrationFormConfiguration } from "./registrationForm";
 import type { ContactsPageData } from "./webSettings/contacts";
 import type { HomePageData } from "./webSettings/home";
 import type { PriceListPageData } from "./webSettings/priceList";
@@ -13,5 +13,5 @@ export type Configuration = {
     studium: StudiumPageData;
     registration: RegistrationPageData;
   };
-  registrationForm: RegistrationFormSettings;
+  registrationForm: RegistrationFormConfiguration;
 };
