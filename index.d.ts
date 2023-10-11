@@ -1,1 +1,1 @@
-export type * as configuration from "./index";
+export type * from "./index";
