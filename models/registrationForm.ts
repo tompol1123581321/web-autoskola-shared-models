@@ -1,4 +1,4 @@
-export type RegistrationPageData = {
+export type RegistrationFormSettings = {
   registrationPageText: string;
   termOptions: Array<{
     label: string;
