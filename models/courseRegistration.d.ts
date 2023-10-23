@@ -32,6 +32,5 @@ export type Term = {
   registrations: Array<Omit<RegistrationFormData, "term">>;
   termConfig: Record<VehicleType, number>;
   isActive: boolean;
-  isFull: boolean;
   created: Date;
 };
