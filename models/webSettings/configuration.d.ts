@@ -5,12 +5,11 @@ import type { RegistrationPageData } from "./registration";
 import type { StudiumPageData } from "./studium";
 
 export type Configuration = {
-  pagesConfiguration: {
+  staticPagesConfiguration: {
     home: HomePageData;
     priceList: PriceListPageData;
     contacts: ContactsPageData;
     studium: StudiumPageData;
     registration: RegistrationPageData;
   };
-  registrationFormConfigurations: RegistrationPageData;
 };
