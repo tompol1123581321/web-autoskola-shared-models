@@ -1,12 +1,13 @@
 type SelectTermOption = {
   label: string;
-  value: number;
+  value: string;
   amountOfFreeSpaces: number;
 };
 
 type CourseVersionOption = { label: string; value: number };
 
 type VehicleType = "A" | "B" | "Combination";
+type TermTime = "March" | "June" | "September" | "December";
 type VehicleTypeConfig = {
   termOptions: Array<SelectTermOption>;
   courseVersionOptions: Array<CourseVersionOption>;
@@ -27,7 +28,8 @@ export type RegistrationFormData = {
 };
 
 export type Term = {
-  id: number;
+  _id?: number;
+  termTime: TermTime;
   label: string;
   registrations: Array<Omit<RegistrationFormData, "term">>;
   termConfig: Record<VehicleType, number>;
