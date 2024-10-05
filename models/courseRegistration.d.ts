@@ -24,7 +24,8 @@ export type RegistrationFormData = {
   notes: string;
   type: VehicleType;
   courseVersion: string;
-  term: number;
+  termId: string;
+  registrationDate: Date;
 };
 
 export type Term = {
