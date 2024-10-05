@@ -1,6 +1,6 @@
 {
   "name": "autoskola-web-shared-models",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "",
   "types": "index.d.ts",
   "scripts": {
