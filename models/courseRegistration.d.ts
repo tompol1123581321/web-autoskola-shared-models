@@ -27,7 +27,7 @@ export type RegistrationFormData = {
   registrationDate: Date;
 };
 
-export type RegistrationFormFilter = Partial<{
+export type RegistrationFormDataFilter = Partial<{
   firstName: string;
   lastName: string;
   phoneNumber: string;
@@ -37,6 +37,18 @@ export type RegistrationFormFilter = Partial<{
   termId: string;
   registrationDateWindow: { from: string; to: string };
 }>;
+
+export type RegistrationsPaginationParams = { page: number; pageSize: number };
+export type RegistrationsSortingParams = {
+  key: keyof RegistrationFormData;
+  direction: "DESC" | "ASC";
+};
+
+export type RegistrationsFilter = {
+  sortParams: RegistrationsSortingParams;
+  dataFilterParams: RegistrationFormDataFilter;
+  paginationsParams: RegistrationsPaginationParams;
+};
 
 export type Term = {
   _id?: number;
