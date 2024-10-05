@@ -6,7 +6,7 @@ type SelectTermOption = {
 
 type CourseVersionOption = { label: string; value: number };
 
-type VehicleType = "A" | "B" | "Combination";
+type VehicleType = "A" | "B" | "A2";
 type TermTime = "March" | "June" | "September" | "December";
 type VehicleTypeConfig = {
   termOptions: Array<SelectTermOption>;
@@ -23,10 +23,20 @@ export type RegistrationFormData = {
   email: string;
   notes: string;
   type: VehicleType;
-  courseVersion: string;
   termId: string;
   registrationDate: Date;
 };
+
+export type RegistrationFormFilter = Partial<{
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
+  notes: string;
+  type: VehicleType;
+  termId: string;
+  registrationDateWindow: { from: string; to: string };
+}>;
 
 export type Term = {
   _id?: number;
