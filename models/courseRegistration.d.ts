@@ -1,20 +1,3 @@
-type SelectTermOption = {
-  label: string;
-  value: string;
-  amountOfFreeSpaces: number;
-};
-
-type CourseVersionOption = { label: string; value: number };
-
-type VehicleType = "A" | "B" | "A2";
-type TermTime = "March" | "June" | "September" | "December";
-type VehicleTypeConfig = {
-  termOptions: Array<SelectTermOption>;
-  courseVersionOptions: Array<CourseVersionOption>;
-};
-
-export type RegistrationFormConfig = Record<VehicleType, VehicleTypeConfig>;
-
 export type RegistrationFormData = {
   id: number;
   firstName: string;
@@ -22,7 +5,6 @@ export type RegistrationFormData = {
   phoneNumber: string;
   email: string;
   notes: string;
-  type: VehicleType;
   termId: string;
   registrationDate: Date;
 };
@@ -33,7 +15,6 @@ export type RegistrationFormDataFilter = Partial<{
   phoneNumber: string;
   email: string;
   notes: string;
-  type: VehicleType;
   termId: string;
   registrationDateWindow: { from: string; to: string };
 }>;
@@ -51,11 +32,10 @@ export type RegistrationsFilter = {
 };
 
 export type Term = {
-  _id?: number;
-  termTime: TermTime;
+  id: string;
   label: string;
   registrations: Array<Omit<RegistrationFormData, "term">>;
-  termConfig: Record<VehicleType, number>;
+  termConfig: { maxRegistrationsCount: number };
   isActive: boolean;
   created: Date;
 };
