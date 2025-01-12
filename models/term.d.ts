@@ -7,8 +7,8 @@ export type Term = {
   created: Date;
 };
 
-export type TermFilter = {
+export type TermFilter = Partial<{
   isActive: boolean;
   nameContains: string;
   created: { from: string; to: string };
-};
+}>;
