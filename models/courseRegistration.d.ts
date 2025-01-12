@@ -10,13 +10,10 @@ export type RegistrationFormData = {
 };
 
 export type RegistrationFormDataFilter = Partial<{
-  firstName: string;
-  lastName: string;
-  phoneNumber: string;
-  email: string;
-  notes: string;
-  termId: string;
-  registrationDateWindow: { from: string; to: string };
+  userSearch: string; // Full-text search input
+  activeTerms: boolean; // Checkbox to filter active or all terms
+  termId: string; // Selected term ID from the searchable select
+  registrationDate: { from: string; to: string }; // Registration date range
 }>;
 
 export type RegistrationsPaginationParams = { page: number; pageSize: number };
@@ -29,13 +26,4 @@ export type RegistrationsFilter = {
   sortParams: RegistrationsSortingParams;
   dataFilterParams: RegistrationFormDataFilter;
   paginationsParams: RegistrationsPaginationParams;
-};
-
-export type Term = {
-  id: string;
-  label: string;
-  registrations: Array<Omit<RegistrationFormData, "term">>;
-  termConfig: { maxRegistrationsCount: number };
-  isActive: boolean;
-  created: Date;
 };
