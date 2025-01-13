@@ -1,7 +1,9 @@
+import { RegistrationFormData } from "./courseRegistration";
+
 export type Term = {
   id: string;
   label: string;
-  registrations: Array<Omit<RegistrationFormData, "term">>;
+  registrations: Array<RegistrationFormData>;
   termConfig: { maxRegistrationsCount: number };
   isActive: boolean;
   created: Date;
