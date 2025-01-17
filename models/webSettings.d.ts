@@ -5,5 +5,4 @@ type TermOption = {
 
 export type WebSettings = {
   priceList: Array<{ label: string; value: string }>;
-  termOptions: Array<TermOption>;
 };
